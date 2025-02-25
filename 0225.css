@@ -1,0 +1,10 @@
+body {
+  background-color: rgb(16, 58, 60);
+  color: rgb(236, 206, 206);
+  font-family: 標楷體, Courier, monospace;
+  font-weight: 200;
+  font-size: 25px;
+}
+.content-title {
+  letter-spacing: 1rem;
+}
