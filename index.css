@@ -8,15 +8,21 @@
 }
 
 /*設置 body 最小寬度為 550px*/
-body {
-  min-width: 550px;
+@media screen and (max-width: 650px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    top: -150px;
+    scale: 0.8;
+  }
 }
 
 /*設置導航欄的樣式*/
 .nav {
   display: flex; /*使用flex布局*/
   position: relative;
-  height: 120px;
+  height: 200px;
   justify-content: space-between;
   background-color: antiquewhite;
   align-items: center; /*垂直居中對其*/
@@ -52,9 +58,11 @@ nav-link a:hover {
 }
 
 iframe {
-  width: 70%;
+  width: 100%;
   height: 500px;
   overflow: visible;
+  resize: both;
+  overflow: auto;
 }
 
 /*# sourceMappingURL=index.css.map */
