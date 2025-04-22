@@ -13,7 +13,7 @@ function openiframe(index) {
       break;
     case 4:
       c.innerHTML =
-        '<iframe src = "mid_hw/midhw2.html" frameborder="1"></iframe>';
+        '<iframe src = "期中作業/midhw2.html" frameborder="1"></iframe>';
       break;
   }
   console.log(index);
