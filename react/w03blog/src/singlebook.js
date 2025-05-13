@@ -58,4 +58,16 @@ function Booklist() {
     </section>
   );
 }
+
+data.map((value) => {
+  return (
+    <Blog
+      key={value.id}
+      img={value.img}
+      title={value.title}
+      author={value.author}
+    />
+  );
+});
+
 export default Booklist;
