@@ -7,18 +7,26 @@ import { useState } from 'react';
 
 function App() {
   const [newmenu, setMenu] = useState(menu);
+  const categoryFiliter = (choose) => {
+    if (choose === 'all') {
+      setMenu(menu);
+    } else {
+      setMenu(menu.filter((value) => value.category === choose));
+    }
+  };
   return (
-    <section className='menu'>
-      {/*<!-- title -->*/}
-      <div className='menu'>
-        <h2>our menu</h2>
-        <div className='underline'></div>
-      </div>
-      {/*<!-- filter buttons -->*/}
-      <Category_xx/>
-    </section>
-    {/*<!-- javascript -->*/}
-    <script src="appcopy.js"></script>
+    <div className='App'>
+      <section className='menu'>
+        {/*<!-- title -->*/}
+        <div className='menu'>
+          <h2>our menu</h2>
+          <div className='underline'></div>
+        </div>
+        {/*<!-- filter buttons -->*/}
+        <Category_xx categoryFiliter={categoryFiliter} />
+        <Meunlist items={newmenu} />
+      </section>
+      {/*<!-- javascript -->*/}
     </div>
   );
 }

@@ -11,7 +11,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-/*.red {
+.red {
   background-color: red;
 }
 .green {
@@ -29,4 +29,4 @@ body {
     color: rgb(0, 0, 0);
     padding: 10px;
   }
-}*/
+}

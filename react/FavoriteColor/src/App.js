@@ -1,11 +1,20 @@
 import { useEffect, useState } from 'react';
-import './App.css';
+import './index.css';
 
 function App() {
   const [color, setColor] = useState('');
   const [colorarrary, setColorarray] = useState([]);
+  useEffect(() => {
+    if (color) setColorarray((colorarrary) => [...colorarrary, color]);
+  }, [color]);
   console.log(colorarrary);
-  return <FavoriteColor color={color} setColor={setColor} />;
+  return (
+    <>
+      <FavoriteColor color={color} setColor={setColor} />
+      <Car></Car>
+      <Totalcolor array={colorarrary}></Totalcolor>
+    </>
+  );
 }
 function FavoriteColor({ color, setColor }) {
   return (
@@ -29,6 +38,9 @@ function FavoriteColor({ color, setColor }) {
 }
 
 function Car() {
+  const handleYearChange = (e) => {
+    setCar({ ...Car, year: e.target.value });
+  };
   const [car, setCar] = useState({
     brand: 'Ford',
     model: 'Mustang',
@@ -54,8 +66,24 @@ function Car() {
       <button onClick={() => changeColor('blue')}> changeColor to blue</button>
       <br></br>
       <button onClick={() => changeYear(1000)}>改年分</button>
+      <input type='text' placeholder='輸入年份' omChange={handleYearChange} />
     </>
   );
 }
 
-export default Car;
+function Totalcolor({ array }) {
+  return (
+    <>
+      <h2>All selected colors:</h2>
+      {array.map((value, index) => {
+        return (
+          <span key={index} className={value}>
+            {value}
+          </span>
+        );
+      })}
+    </>
+  );
+}
+
+export default App;
