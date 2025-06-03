@@ -23,17 +23,14 @@ const Earth = () => {
   );
 };
 
-const Blog = ({img,title,author}) => {
+const Blog = ({ img, title, author }) => {
   return (
     <article className='blog'>
-        <img
-          className='img blog-img'
-          src={img}
-          alt="Coffee photo"
-        ></img>
-        <div className="blog-content">
-          <p>{author}</p>
-        </div>
+      <img className='img blog-img' src={img} alt='Coffee photo'></img>
+      <div className='blog-content'>
+        <p>{author}</p>
+      </div>
+    </article>
   );
 };
 export default App;

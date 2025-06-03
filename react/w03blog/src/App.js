@@ -42,6 +42,32 @@ function App() {
     <div className='blogs'>
       <div className='section-title'>
         <h2>latest blogs</h2>
+        return (
+        <div className='blogs'>
+          <div className='section-title'>
+            <img src={logo} className='App-logo' alt='logo' />
+          </div>
+          <div className='blogs-center'>
+            <Blog
+              img={
+                'https://images.unsplash.com/photo-1535905557558-afc4877a26fc?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGJvb2t8ZW58MHx8MHx8fDA%3D'
+              }
+              title={'Operating system concepts : Windows XP update'}
+              author={'Silberschatz, Abraham'}
+            />
+            <Blog
+              img={booka.img}
+              title={booka.title}
+              author={booka.author}
+            ></Blog>
+            <Blog
+              img={bookb.img}
+              title={bookb.title}
+              author={bookb.author}
+            ></Blog>
+          </div>
+        </div>
+        );
       </div>
       <div className='blogs-center'></div>
       <div className='section-title'>
@@ -64,4 +90,4 @@ const Blog = ({ img, title, author }) => {
   );
 };
 
-export default Booklist;
+export default App;

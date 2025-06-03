@@ -15,7 +15,7 @@ export const bookc = {
   title: 'The Golden Compass',
   author: 'Philip Pullman',
 };
-export { booka, bookb };
+export { booka, bookb, bookc };
 
 function Blog({ img, title, author }) {
   return (
