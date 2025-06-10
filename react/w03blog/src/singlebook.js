@@ -15,9 +15,9 @@ export const bookc = {
   title: 'The Golden Compass',
   author: 'Philip Pullman',
 };
-export { booka, bookb, bookc };
+export { booka, bookb };
 
-function Blog({ img, title, author }) {
+export function Blog({ img, title, author }) {
   return (
     <div className='blog'>
       <img src={img} alt={title} />
@@ -59,7 +59,7 @@ function Booklist() {
   );
 }
 
-data.map((value) => {
+/*data.map((value) => {
   return (
     <Blog
       key={value.id}
@@ -68,6 +68,6 @@ data.map((value) => {
       author={value.author}
     />
   );
-});
+});*/
 
 export default Booklist;

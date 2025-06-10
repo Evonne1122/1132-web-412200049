@@ -21,7 +21,7 @@ function App() {
   //新增一個新的submit行為，e乃event
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (name) {
+    /*if (name) {
       const newitem = {
         id: new Date().getTime().toString(),
         title: name,
@@ -33,7 +33,18 @@ function App() {
     } else {
       showAlert();
     }
-    console.log(alert);
+    console.log(alert);*/
+    if (!name) {
+      showAlert(true, 'please enter value', 'danger');
+    } else {
+      showAlert(true, 'value changed', 'success');
+      const newItem = {
+        id: new Date().getTime().toString(),
+        title: name,
+      };
+      setList([...list, newItem]);
+      setName('');
+    }
   };
 
   return (
@@ -41,7 +52,7 @@ function App() {
       {/* 1.傳統form用action，預設也會使用action講述資料交給伺服器後的處理， 現在用onsubmit 自定義*/}
       <form className='gerocery' onSubmit={handleSubmit}>
         {/* 條件渲染 所以當條件渲染的元件被移除再加回來時，它的生命週期會重新開始導致它裡面的useeffect每次都一定會執行相依性[]沒用*/}
-
+        {alert.show && <Alert_xx {...alert} removeAlert={showAlert} />}
         <h3>菜籃</h3>
 
         <div className='form-control'>

@@ -18,7 +18,7 @@ function App() {
     <div className='App'>
       <section className='menu'>
         {/*<!-- title -->*/}
-        <div className='menu'>
+        <div className='title'>
           <h2>our menu</h2>
           <div className='underline'></div>
         </div>

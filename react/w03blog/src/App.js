@@ -1,6 +1,6 @@
 import './App.css';
-import Booklist from './singlebook';
-import { booka, bookb, bookc } from './singlebook'; /*
+import Booklist, { booka, bookb, Blog } from './singlebook';
+import logo from './logo.svg'; /*
 const booka = {
   img: 'https://ibw.bwnet.com.tw/image/pool/2014/12/24e79693f2d5c5902acc60dc3d23da4a.png',
   title: 'Diary of a Wimpy Kid',
@@ -42,42 +42,24 @@ function App() {
     <div className='blogs'>
       <div className='section-title'>
         <h2>latest blogs</h2>
-        return (
-        <div className='blogs'>
-          <div className='section-title'>
-            <img src={logo} className='App-logo' alt='logo' />
-          </div>
-          <div className='blogs-center'>
-            <Blog
-              img={
-                'https://images.unsplash.com/photo-1535905557558-afc4877a26fc?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGJvb2t8ZW58MHx8MHx8fDA%3D'
-              }
-              title={'Operating system concepts : Windows XP update'}
-              author={'Silberschatz, Abraham'}
-            />
-            <Blog
-              img={booka.img}
-              title={booka.title}
-              author={booka.author}
-            ></Blog>
-            <Blog
-              img={bookb.img}
-              title={bookb.title}
-              author={bookb.author}
-            ></Blog>
-          </div>
-        </div>
-        );
       </div>
-      <div className='blogs-center'></div>
+      <div className='blogs-center'>
+        <Blog
+          img='https://images.unsplash.com/photo-1535905557558-afc4877a26fc?w=1000&auto=format&fit=crop&q=60'
+          title='Operating system concepts : Windows XP update'
+          author='Silberschatz, Abraham'
+        />
+        <Blog img={booka.img} title={booka.title} author={booka.author} />
+        <Blog img={bookb.img} title={bookb.title} author={bookb.author} />
+      </div>
       <div className='section-title'>
         <h2>part2</h2>
       </div>
-      <Booklist></Booklist>
+      <Booklist />
     </div>
   );
 }
-
+/*
 const Blog = ({ img, title, author }) => {
   return (
     <article className='blogs'>
@@ -88,6 +70,6 @@ const Blog = ({ img, title, author }) => {
       </div>
     </article>
   );
-};
+};*/
 
 export default App;
